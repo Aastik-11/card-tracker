@@ -178,7 +178,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
       <label>Atlas tier</label>
       <select id="atlas-tier" onchange="pnl()">
         <option value="none">Below ₹3L (0 milestone, no renewal)</option>
-        <option value="silver">Silver — ₹3L (2,500 milestone)</option>
+        <option value="silver">Silver — ₹3L (5,000 milestone)</option>
         <option value="gold">Gold — ₹7.5L (5,000 milestone + 5,000 renewal)</option>
       </select>
     </div>
@@ -394,7 +394,7 @@ function pnl(){
   document.getElementById('pnl-cards').innerHTML=
     pCard('HSBC Premier','b-h',hFee,hRew,0,'No renewal benefit')+
     pCard('Times Black','b-t',tFee,tRew,tBen,`₹12K renewal + ${tSpend>=200000?'₹10K Klook ✓':'₹10K Klook — need ₹'+(200000-tSpend).toLocaleString('en-IN')+' more'}`)+
-    pCard('Axis Atlas','b-a',aFee,aRew,aBen,`${tier==='gold'?'Gold: 5K milestone + 5K renewal':tier==='silver'?'Silver: 2.5K milestone':'Below ₹3L: 0 milestone'}`)+
+    pCard('Axis Atlas','b-a',aFee,aRew,aBen,`${tier==='gold'?'Gold: 5K milestone + 5K renewal':tier==='silver'?'Silver: 5K milestone':'Below ₹3L: 0 milestone'}`)+
     pCard('MRCC Card 1','b-m',mr1.fee,mr1.val,0,`${mr1.fn} | ${mr1.total.toLocaleString('en-IN')} MR pts`)+
     pCard('MRCC Card 2','b-m',mr2.fee,mr2.val,0,`${mr2.fn} | ${mr2.total.toLocaleString('en-IN')} MR pts`)+
     pCard('IndusInd Avios','b-av',avFee,avBen,0,'5,000 renewal Avios @ ~₹1');
