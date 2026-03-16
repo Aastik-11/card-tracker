@@ -18,33 +18,27 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .slabel{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--dim);margin-bottom:10px}
 .g3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px}
 .g2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px}
-.g6{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:14px}
 .sinp{display:flex;flex-direction:column;gap:4px}
 .sinp label{font-size:11px;color:var(--muted);font-weight:500}
 .sinp input,.sinp select{padding:8px 10px;font-size:13px;border:1px solid var(--border);border-radius:7px;background:#fff;color:var(--text);font-family:inherit;width:100%}
 .sinp input:focus,.sinp select:focus{outline:none;border-color:#888}
-.rbox{background:#f9f9f6;border:1px solid var(--border);border-radius:9px;padding:13px}
-.rbox-v{font-size:22px;font-weight:700;letter-spacing:-0.02em;margin:4px 0 2px}
-.rbox-s{font-size:10px;color:var(--muted)}
 .badge{display:inline-block;font-size:10px;font-weight:700;padding:2px 9px;border-radius:20px;letter-spacing:0.03em}
 .b-h{background:#ddd8f8;color:#3a3080}
 .b-t{background:#fad8c8;color:#7a3018}
 .b-a{background:#b8ecd8;color:#0a5038}
-.b-m1{background:#fff0b8;color:#7a5800}
-.b-m2{background:#ffe4b8;color:#7a3800}
+.b-m{background:#fff0b8;color:#7a5800}
 .b-av{background:#e0ecff;color:#0a2870}
 .tbox{background:#fff;border:1px solid var(--border);border-radius:9px;overflow:hidden;margin-bottom:14px}
 .th{display:grid;background:#f5f5f0;padding:8px 14px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--dim)}
 .tr{display:grid;padding:9px 14px;border-top:1px solid var(--border);font-size:12px;align-items:center}
 .tr.tot{background:#f5f5f0;font-weight:700;font-size:13px}
 .rc{text-align:right}
-.bv{font-weight:700;color:var(--text)}
-.dv{color:var(--dim)}
 .pos{color:var(--green);font-weight:600}
 .neg{color:var(--red);font-weight:600}
 .notebox{font-size:11px;color:var(--muted);background:#f9f9f6;border:1px solid var(--border);padding:9px 13px;border-radius:7px;line-height:1.7;margin-bottom:12px}
 .warn{background:#fffbe8;border:1px solid #f0d060;padding:9px 13px;border-radius:7px;font-size:11px;color:#7a5800;line-height:1.6;margin-bottom:12px}
-.wstrip{background:#1a1a1a;color:#fff;border-radius:8px;padding:11px 14px;margin-bottom:14px;font-size:13px;display:flex;align-items:center;gap:8px}
+.info{background:#f0f8ff;border:1px solid #b8d8f8;padding:9px 13px;border-radius:7px;font-size:11px;color:#0a4080;line-height:1.6;margin-bottom:12px}
+.wstrip{background:#1a1a1a;color:#fff;border-radius:8px;padding:11px 14px;margin-bottom:14px;font-size:13px}
 .pnl3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:16px}
 .pc{background:#fff;border:1px solid var(--border);border-radius:10px;padding:14px}
 .pc h3{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--dim);margin-bottom:10px}
@@ -57,83 +51,127 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .si{display:flex;gap:8px;margin-bottom:8px;font-size:13px;line-height:1.5}
 .si:last-child{margin-bottom:0}
 .dot{width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;flex-shrink:0;margin-top:2px}
-.og{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}
-.oc{background:#fff;border:1px solid var(--border);border-radius:9px;padding:13px}
-.oc h4{font-size:10px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px}
-.or{display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid var(--border);font-size:12px}
-.or:last-child{border-bottom:none}
 .tab-content{display:none}
 .tab-content.active{display:block}
-.divhr{border:none;border-top:1px solid var(--border);margin:10px 0}
+.route-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px}
+.rcard{background:#fff;border:1px solid var(--border);border-radius:10px;padding:14px}
+.rcard h4{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--dim);margin-bottom:10px}
+.rrow{display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid var(--border);font-size:12px}
+.rrow:last-child{border-bottom:none}
+.rrow .rl{color:var(--muted)}
+.rrow .rv{font-weight:500}
+.result-strip{background:#f0fdf4;border:1px solid #b8ecd8;border-radius:8px;padding:12px 14px;margin-bottom:14px}
+.result-strip-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:#0a5038;margin-bottom:8px}
+.rs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.rs-box{background:#fff;border:1px solid #b8ecd8;border-radius:7px;padding:10px}
+.rs-val{font-size:18px;font-weight:700;color:var(--text);margin:3px 0}
+.rs-sub{font-size:10px;color:var(--muted)}
+.section-divider{border:none;border-top:1px solid var(--border);margin:20px 0}
 </style>
 </head>
 <body>
 <div class="topbar">
   <div>
     <div class="topbar-title">My Card Stack — Reward &amp; P&amp;L Tracker</div>
-    <div class="topbar-sub">6 cards · HSBC Premier · Times Black · Axis Atlas · MRCC ×2 · IndusInd Avios</div>
+    <div class="topbar-sub">6 cards · Smart spend router · Each ₹ goes to ONE card only</div>
   </div>
   <div style="font-size:11px;color:#888">Mar 2026</div>
 </div>
 <div class="tabs">
-  <button class="tab active" onclick="sw('calc')">Monthly Calculator</button>
+  <button class="tab active" onclick="sw('router')">Spend Router</button>
   <button class="tab" onclick="sw('pnl')">Annual P&amp;L</button>
-  <button class="tab" onclick="sw('opt')">Optimizer</button>
+  <button class="tab" onclick="sw('opt')">Strategy Guide</button>
   <button class="tab" onclick="sw('ref')">Rate Reference</button>
 </div>
 
 <div class="main">
 
-<div id="tab-calc" class="tab-content active">
-  <div class="slabel">Monthly spend — main cards (₹)</div>
+<!-- ===== TAB 1: SPEND ROUTER ===== -->
+<div id="tab-router" class="tab-content active">
+  <div class="info">Each spend category is routed to the best card. You control the split — the calculator shows reward for each card separately. MRCC is always independent (fixed ₹9K voucher strategy).</div>
+
+  <div class="slabel">Step 1 — Enter your monthly spend totals (₹)</div>
   <div class="g3">
-    <div class="sinp"><label>Base / General</label><input type="number" id="s-base" value="0" oninput="calc()"></div>
-    <div class="sinp"><label>Flights</label><input type="number" id="s-flight" value="0" oninput="calc()"></div>
-    <div class="sinp"><label>Hotels</label><input type="number" id="s-hotel" value="0" oninput="calc()"></div>
-    <div class="sinp"><label>Vouchers (Times Black iShop)</label><input type="number" id="s-voucher" value="0" oninput="calc()"></div>
-    <div class="sinp"><label>Amazon (Times Black iShop)</label><input type="number" id="s-amazon" value="0" oninput="calc()"></div>
-    <div class="sinp"><label>Flipkart (Times Black iShop)</label><input type="number" id="s-flipkart" value="0" oninput="calc()"></div>
+    <div class="sinp"><label>Regular / General spend</label><input type="number" id="s-gen" value="0" oninput="route()"></div>
+    <div class="sinp"><label>Flight bookings</label><input type="number" id="s-flight" value="0" oninput="route()"></div>
+    <div class="sinp"><label>Hotel bookings</label><input type="number" id="s-hotel" value="0" oninput="route()"></div>
+    <div class="sinp"><label>Airbnb bookings</label><input type="number" id="s-airbnb" value="0" oninput="route()"></div>
+    <div class="sinp"><label>Online shopping (Amazon/Flipkart)</label><input type="number" id="s-shop" value="0" oninput="route()"></div>
+    <div class="sinp"><label>Voucher purchases (iShop)</label><input type="number" id="s-voucher" value="0" oninput="route()"></div>
   </div>
-  <div class="slabel">MRCC monthly spend (per card)</div>
-  <div class="warn">Strategy: ₹9,000 voucher purchase/card/month → triggers 4×₹1,500 txn bonus (1,000 MR). Keep ≥₹20K/month/card for second 1,000 MR bonus. Keep ≥₹1.5L/year/card for free annual fee.</div>
-  <div class="g2">
-    <div class="sinp"><label>MRCC Card 1 — monthly ₹</label><input type="number" id="s-m1" value="0" oninput="calc()"></div>
-    <div class="sinp"><label>MRCC Card 2 — monthly ₹</label><input type="number" id="s-m2" value="0" oninput="calc()"></div>
+
+  <div class="slabel">Step 2 — Flight routing (when price is close, which card?)</div>
+  <div class="g2" style="margin-bottom:16px">
+    <div class="sinp">
+      <label>Flight spend split — HSBC vs Times Black iShop</label>
+      <select id="flight-route" onchange="route()">
+        <option value="hsbc">100% HSBC Premier (18% — default best)</option>
+        <option value="times">100% Times Black iShop (12%)</option>
+        <option value="split">50/50 split — uncertain</option>
+      </select>
+    </div>
+    <div class="sinp">
+      <label>Hotel spend split — HSBC vs Times Black iShop vs Atlas (Airbnb)</label>
+      <select id="hotel-route" onchange="route()">
+        <option value="hsbc">100% HSBC Premier (36% — default best)</option>
+        <option value="times">100% Times Black iShop (24%)</option>
+        <option value="split">50/50 HSBC + Times Black</option>
+      </select>
+    </div>
   </div>
-  <div class="slabel">Monthly reward value (₹ equivalent)</div>
-  <div class="g6" id="rc-cards"></div>
-  <div class="wstrip" id="wstrip">—</div>
-  <div class="slabel">Main cards breakdown</div>
-  <div class="tbox" id="main-break"></div>
-  <div class="slabel">MRCC breakdown</div>
-  <div class="tbox" id="mrcc-break"></div>
-  <div class="notebox" id="calc-note"></div>
+
+  <div class="slabel">Step 3 — MRCC (independent — always ₹9K voucher/card/month)</div>
+  <div class="g2" style="margin-bottom:16px">
+    <div class="sinp"><label>MRCC Card 1 monthly spend ₹</label><input type="number" id="s-m1" value="0" oninput="route()"></div>
+    <div class="sinp"><label>MRCC Card 2 monthly spend ₹</label><input type="number" id="s-m2" value="0" oninput="route()"></div>
+  </div>
+
+  <div class="slabel">Monthly reward by card (your actual routed spend)</div>
+  <div class="route-grid" id="route-cards"></div>
+
+  <div class="result-strip">
+    <div class="result-strip-title">Monthly summary</div>
+    <div class="rs-grid" id="route-summary"></div>
+  </div>
+
+  <div class="slabel">Routing breakdown</div>
+  <div class="tbox" id="route-breakdown"></div>
+  <div class="notebox" id="route-note"></div>
 </div>
 
+<!-- ===== TAB 2: ANNUAL P&L ===== -->
 <div id="tab-pnl" class="tab-content">
-  <div class="slabel">Annual spend (₹)</div>
+  <div class="info">Enter your actual annual routed spend per card. This is what you actually put on each card — not total spend counted multiple times.</div>
+
+  <div class="slabel">Annual spend actually routed to each card (₹)</div>
   <div class="g3">
-    <div class="sinp"><label>Annual base</label><input type="number" id="a-base" value="600000" oninput="pnl()"></div>
-    <div class="sinp"><label>Annual flights</label><input type="number" id="a-flight" value="240000" oninput="pnl()"></div>
-    <div class="sinp"><label>Annual hotels</label><input type="number" id="a-hotel" value="120000" oninput="pnl()"></div>
-    <div class="sinp"><label>Annual vouchers</label><input type="number" id="a-voucher" value="60000" oninput="pnl()"></div>
-    <div class="sinp"><label>Annual Amazon iShop</label><input type="number" id="a-amazon" value="60000" oninput="pnl()"></div>
-    <div class="sinp"><label>Annual Flipkart iShop</label><input type="number" id="a-flipkart" value="60000" oninput="pnl()"></div>
+    <div class="sinp"><label>HSBC Premier (flights + hotels)</label><input type="number" id="a-hsbc" value="0" oninput="pnl()"></div>
+    <div class="sinp"><label>Times Black (vouchers + some flights/hotels)</label><input type="number" id="a-times" value="0" oninput="pnl()"></div>
+    <div class="sinp"><label>Axis Atlas (general + Airbnb)</label><input type="number" id="a-atlas" value="0" oninput="pnl()"></div>
   </div>
+  <div class="g3">
+    <div class="sinp"><label>HSBC — % that is flights (rest = hotels)</label><input type="number" id="a-hsbc-fpct" value="70" oninput="pnl()" min="0" max="100"><span style="font-size:10px;color:var(--muted)">e.g. 70 means 70% flights, 30% hotels</span></div>
+    <div class="sinp"><label>Times Black — % via iShop flights (rest = vouchers/shop)</label><input type="number" id="a-times-fpct" value="30" oninput="pnl()" min="0" max="100"></div>
+    <div class="sinp"><label>Atlas — % that is Airbnb/direct travel (rest = general)</label><input type="number" id="a-atlas-tpct" value="20" oninput="pnl()" min="0" max="100"></div>
+  </div>
+
   <div class="g2">
-    <div class="sinp"><label>Atlas tier</label>
+    <div class="sinp">
+      <label>Atlas tier</label>
       <select id="atlas-tier" onchange="pnl()">
         <option value="silver">Silver — ₹3L spend (2,500 milestone, no renewal)</option>
-        <option value="gold" selected>Gold — ₹7.5L spend (5,000 milestone + 5,000 renewal)</option>
+        <option value="gold">Gold — ₹7.5L spend (5,000 milestone + 5,000 renewal)</option>
       </select>
     </div>
     <div></div>
   </div>
+
   <div class="slabel">MRCC annual spend (per card)</div>
   <div class="g2">
-    <div class="sinp"><label>MRCC Card 1 annual ₹</label><input type="number" id="a-m1" value="108000" oninput="pnl()"></div>
-    <div class="sinp"><label>MRCC Card 2 annual ₹</label><input type="number" id="a-m2" value="108000" oninput="pnl()"></div>
+    <div class="sinp"><label>MRCC Card 1 annual ₹</label><input type="number" id="a-m1" value="0" oninput="pnl()"></div>
+    <div class="sinp"><label>MRCC Card 2 annual ₹</label><input type="number" id="a-m2" value="0" oninput="pnl()"></div>
   </div>
+
   <div class="slabel">Annual P&amp;L per card</div>
   <div class="pnl3" id="pnl-cards"></div>
   <div class="slabel">Total stack summary</div>
@@ -141,16 +179,48 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
   <div class="notebox" id="pnl-note"></div>
 </div>
 
+<!-- ===== TAB 3: STRATEGY GUIDE ===== -->
 <div id="tab-opt" class="tab-content">
-  <div class="slabel">Best card by spend category</div>
-  <div class="og" id="opt-cat"></div>
-  <div class="slabel">Reward % boost actions</div>
-  <div class="tbox" id="opt-boost"></div>
-  <div class="slabel">Optimal routing strategy</div>
-  <div class="strat" id="opt-strat"></div>
-  <div class="notebox" id="opt-note"></div>
+  <div class="slabel">Routing decision tree</div>
+  <div class="tbox" style="margin-bottom:16px">
+    <div class="th" style="grid-template-columns:1.5fr 1fr 1fr 1fr"><span>Spend type</span><span class="rc">Best card</span><span class="rc">Rate</span><span class="rc">Fallback</span></div>
+    <div class="tr" style="grid-template-columns:1.5fr 1fr 1fr 1fr"><span>Hotel (direct booking)</span><span class="rc"><span class="badge b-h">HSBC</span></span><span class="rc pos">36%</span><span class="rc">Times Black 24%</span></div>
+    <div class="tr" style="grid-template-columns:1.5fr 1fr 1fr 1fr"><span>Flights (direct / airline site)</span><span class="rc"><span class="badge b-h">HSBC</span></span><span class="rc pos">18%</span><span class="rc">Times Black 12%</span></div>
+    <div class="tr" style="grid-template-columns:1.5fr 1fr 1fr 1fr"><span>Airbnb</span><span class="rc"><span class="badge b-a">Atlas</span></span><span class="rc pos">10% (5 EDGE × 2)</span><span class="rc">HSBC 3%</span></div>
+    <div class="tr" style="grid-template-columns:1.5fr 1fr 1fr 1fr"><span>Vouchers (via iShop)</span><span class="rc"><span class="badge b-t">Times Black</span></span><span class="rc pos">12%</span><span class="rc">Atlas 4%</span></div>
+    <div class="tr" style="grid-template-columns:1.5fr 1fr 1fr 1fr"><span>Amazon / Flipkart (via iShop)</span><span class="rc"><span class="badge b-t">Times Black</span></span><span class="rc pos">~7.87% net</span><span class="rc">Atlas 4%</span></div>
+    <div class="tr" style="grid-template-columns:1.5fr 1fr 1fr 1fr"><span>Regular / General spend</span><span class="rc"><span class="badge b-a">Atlas</span></span><span class="rc pos">4%</span><span class="rc">HSBC 3%</span></div>
+    <div class="tr" style="grid-template-columns:1.5fr 1fr 1fr 1fr"><span>₹1,500+ transactions (any)</span><span class="rc"><span class="badge b-m">MRCC</span></span><span class="rc pos">Bonus 1,000 MR</span><span class="rc">4× per month</span></div>
+  </div>
+
+  <div class="slabel">Times Black iShop strategy — how to maximise ₹2L annual threshold</div>
+  <div class="strat">
+    <h3>Route regular spend through iShop vouchers</h3>
+    <div class="si"><span class="dot" style="background:#fad8c8;color:#7a3018">1</span><span>Buy Amazon Pay / brand vouchers via Times Black iShop → get 12% reward on the voucher spend → then use the voucher for your regular Amazon purchases. Effective 12% on what would otherwise be 3–4%.</span></div>
+    <div class="si"><span class="dot" style="background:#fad8c8;color:#7a3018">2</span><span>Any shortfall to hit ₹2L annual? Push general shopping through iShop vouchers to reach the threshold and unlock ₹10,000 Klook voucher.</span></div>
+    <div class="si"><span class="dot" style="background:#fad8c8;color:#7a3018">3</span><span>Hotel via iShop (24%) vs HSBC direct (36%) — HSBC wins by 12%. Only use Times Black iShop for hotels if HSBC is unavailable or price difference justifies it.</span></div>
+    <div class="si"><span class="dot" style="background:#fad8c8;color:#7a3018">4</span><span>Flight via iShop (12%) vs HSBC direct (18%) — HSBC wins by 6%. Same logic — prefer HSBC unless price on iShop is meaningfully cheaper.</span></div>
+  </div>
+
+  <div class="slabel">MRCC strategy — independent of other cards</div>
+  <div class="strat" style="background:#fffbe8;border-color:#f0d060">
+    <h3 style="color:#7a5800">Fixed monthly plan — ₹9,000 per card</h3>
+    <div class="si"><span class="dot" style="background:#fff0b8;color:#7a5800">1</span><span>Buy ₹9,000 worth of vouchers per card per month → this counts as 6 transactions of ₹1,500 = triggers the 4× txn bonus (1,000 MR each card).</span></div>
+    <div class="si"><span class="dot" style="background:#fff0b8;color:#7a5800">2</span><span>If you can add another ₹11,000 on either MRCC card in that month (₹20K total), you unlock the second 1,000 MR bonus too.</span></div>
+    <div class="si"><span class="dot" style="background:#fff0b8;color:#7a5800">3</span><span>Keep each card at ₹1.5L+ annual spend → full fee waiver. At ₹9K/month × 12 = ₹1.08L — you need ~₹42K more/year on each card. Add some regular spend or larger voucher months.</span></div>
+    <div class="si"><span class="dot" style="background:#fff0b8;color:#7a5800">4</span><span>MR points never expire. Accumulate toward 18K Gold collection (₹9,000 Taj voucher) = ₹0.50/MR value.</span></div>
+  </div>
+
+  <div class="slabel">Axis Atlas — Airbnb advantage</div>
+  <div class="strat" style="background:#f0f8f4;border-color:#b8ecd8">
+    <h3>Why Atlas for Airbnb</h3>
+    <div class="si"><span class="dot" style="background:#b8ecd8;color:#0a5038">A</span><span>Airbnb qualifies as travel MCC on Atlas → earns 5 EDGE miles/₹100 → transfers at 1:2 = <b>10 air miles per ₹100 (10% return)</b>. HSBC gives only 3% on Airbnb (base rate). Atlas wins by 7%.</span></div>
+    <div class="si"><span class="dot" style="background:#b8ecd8;color:#0a5038">A</span><span>Decision rule: if hotel price on booking.com/direct ≤ Airbnb price → use HSBC for hotel (36%). If Airbnb is cheaper → use Atlas (10%). The 26% rate gap means hotel needs to be significantly pricier to justify Airbnb.</span></div>
+    <div class="si"><span class="dot" style="background:#b8ecd8;color:#0a5038">A</span><span>Push Atlas to ₹7.5L annual for Gold tier → 5,000 milestone + 5,000 renewal = 10,000 EDGE miles = ₹10,000 bonus value.</span></div>
+  </div>
 </div>
 
+<!-- ===== TAB 4: RATE REFERENCE ===== -->
 <div id="tab-ref" class="tab-content">
   <div id="ref-content"></div>
 </div>
@@ -159,28 +229,18 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 
 <script>
 const GST=0.18,CONV=0.035,NC=CONV*(1+GST);
-const INR=n=>'₹'+Math.round(n).toLocaleString('en-IN');
-
-function sw(t){
-  const tabs=['calc','pnl','opt','ref'];
-  document.querySelectorAll('.tab').forEach((el,i)=>el.classList.toggle('active',tabs[i]===t));
-  document.querySelectorAll('.tab-content').forEach(el=>el.classList.remove('active'));
-  document.getElementById('tab-'+t).classList.add('active');
-  if(t==='opt')renderOpt();
-  if(t==='ref')renderRef();
-  if(t==='pnl')pnl();
-}
+const INR=n=>n===0?'₹0':'₹'+Math.round(Math.abs(n)).toLocaleString('en-IN');
+const SINR=n=>n>=0?'+₹'+Math.round(n).toLocaleString('en-IN'):'-₹'+Math.round(Math.abs(n)).toLocaleString('en-IN');
 
 function g(id){return +document.getElementById(id).value||0;}
 
-function mainRewards(base,flight,hotel,voucher,amazon,flipkart){
-  const h={base:base*.03,flight:flight*.18,hotel:hotel*.36,voucher:voucher*.03,amazon:amazon*.03,flipkart:flipkart*.03};
-  h.total=Object.values(h).reduce((a,b)=>a+b,0);
-  const t={base:base*.02,flight:flight*.12,hotel:hotel*.24,voucher:voucher*.12,amazon:amazon*.12-amazon*NC,flipkart:flipkart*.12-flipkart*NC};
-  t.total=Object.values(t).reduce((a,b)=>a+b,0);
-  const a={base:base*.04,flight:flight*.10,hotel:hotel*.10,voucher:voucher*.04,amazon:amazon*.04,flipkart:flipkart*.04};
-  a.total=Object.values(a).reduce((a,b)=>a+b,0);
-  return{h,t,a};
+function sw(t){
+  const tabs=['router','pnl','opt','ref'];
+  document.querySelectorAll('.tab').forEach((el,i)=>el.classList.toggle('active',tabs[i]===t));
+  document.querySelectorAll('.tab-content').forEach(el=>el.classList.remove('active'));
+  document.getElementById('tab-'+t).classList.add('active');
+  if(t==='ref')renderRef();
+  if(t==='pnl')pnl();
 }
 
 function mrccCalc(spend){
@@ -191,47 +251,89 @@ function mrccCalc(spend){
   return{baseMR:Math.round(baseMR),b1,b2,total,val:total*0.5};
 }
 
-function calc(){
-  const base=g('s-base'),flight=g('s-flight'),hotel=g('s-hotel');
-  const voucher=g('s-voucher'),amazon=g('s-amazon'),flipkart=g('s-flipkart');
+function route(){
+  const gen=g('s-gen'),flight=g('s-flight'),hotel=g('s-hotel');
+  const airbnb=g('s-airbnb'),shop=g('s-shop'),voucher=g('s-voucher');
   const m1s=g('s-m1'),m2s=g('s-m2');
-  const{h,t,a}=mainRewards(base,flight,hotel,voucher,amazon,flipkart);
+  const fr=document.getElementById('flight-route').value;
+  const hr=document.getElementById('hotel-route').value;
+
+  // Route flights
+  let hFlight=0,tFlight=0;
+  if(fr==='hsbc'){hFlight=flight;}
+  else if(fr==='times'){tFlight=flight;}
+  else{hFlight=flight*0.5;tFlight=flight*0.5;}
+
+  // Route hotels
+  let hHotel=0,tHotel=0;
+  if(hr==='hsbc'){hHotel=hotel;}
+  else if(hr==='times'){tHotel=hotel;}
+  else{hHotel=hotel*0.5;tHotel=hotel*0.5;}
+
+  // HSBC: flights@18%, hotels@36%, everything else that lands here@3%
+  const hRew=hFlight*0.18+hHotel*0.36;
+
+  // Times Black: flights@12%, hotels@24%, vouchers@12%, shopping net~7.87%
+  const tRew=tFlight*0.12+tHotel*0.24+voucher*0.12+(shop*0.12-shop*NC);
+
+  // Atlas: general@4%, Airbnb@10% (5 EDGE miles x2 transfer)
+  const aRew=gen*0.04+airbnb*0.10;
+
+  // MRCC
   const m1=mrccCalc(m1s),m2=mrccCalc(m2s);
 
+  // Build card display
   const cards=[
-    {cls:'b-h',nm:'HSBC Premier',val:h.total,sub:Math.round(h.total).toLocaleString('en-IN')+' air miles'},
-    {cls:'b-t',nm:'Times Black',val:t.total,sub:'iShop pts (1pt=₹1)'},
-    {cls:'b-a',nm:'Axis Atlas',val:a.total,sub:Math.round(a.total).toLocaleString('en-IN')+' EDGE miles'},
-    {cls:'b-m1',nm:'MRCC Card 1',val:m1.val,sub:m1.total.toLocaleString('en-IN')+' MR pts'},
-    {cls:'b-m2',nm:'MRCC Card 2',val:m2.val,sub:m2.total.toLocaleString('en-IN')+' MR pts'},
-    {cls:'b-av',nm:'IndusInd Avios',val:0,sub:'No active spend planned'},
+    {cls:'b-h',nm:'HSBC Premier',val:hRew,spend:hFlight+hHotel,detail:`Flights: ${INR(hFlight)} @ 18% | Hotels: ${INR(hHotel)} @ 36%`},
+    {cls:'b-t',nm:'Times Black',val:tRew,spend:tFlight+tHotel+voucher+shop,detail:`Flights: ${INR(tFlight)} | Hotels: ${INR(tHotel)} | Vouchers: ${INR(voucher)} | Shopping: ${INR(shop)}`},
+    {cls:'b-a',nm:'Axis Atlas',val:aRew,spend:gen+airbnb,detail:`General: ${INR(gen)} @ 4% | Airbnb: ${INR(airbnb)} @ 10%`},
+    {cls:'b-m',nm:'MRCC Card 1',val:m1.val,spend:m1s,detail:`${m1.total.toLocaleString('en-IN')} MR pts (base ${m1.baseMR} + bonus ${m1.b1+m1.b2})`},
+    {cls:'b-m',nm:'MRCC Card 2',val:m2.val,spend:m2s,detail:`${m2.total.toLocaleString('en-IN')} MR pts (base ${m2.baseMR} + bonus ${m2.b1+m2.b2})`},
+    {cls:'b-av',nm:'IndusInd Avios',val:0,spend:0,detail:'No active spend — annual fee only'},
   ];
-  document.getElementById('rc-cards').innerHTML=cards.map(c=>`<div class="rbox"><span class="badge ${c.cls}">${c.nm}</span><div class="rbox-v">${INR(c.val)}</div><div class="rbox-s">${c.sub}</div></div>`).join('');
 
-  const maxM=Math.max(h.total,t.total,a.total);
-  const wn=maxM===h.total?'HSBC Premier':maxM===t.total?'Times Black':'Axis Atlas';
-  document.getElementById('wstrip').innerHTML=`★ Best main card: <b>${wn}</b> — ${INR(maxM)} &nbsp;|&nbsp; Both MRCCs combined: ${INR(m1.val+m2.val)}`;
+  document.getElementById('route-cards').innerHTML=cards.map(c=>`
+    <div class="rcard">
+      <h4><span class="badge ${c.cls}">${c.nm}</span></h4>
+      <div class="rrow"><span class="rl">Spend routed</span><span class="rv">${INR(c.spend)}</span></div>
+      <div class="rrow"><span class="rl">Reward value</span><span class="rv pos">${INR(c.val)}</span></div>
+      <div style="font-size:10px;color:var(--muted);margin-top:6px;line-height:1.5">${c.detail}</div>
+    </div>`).join('');
 
-  const catL=['Base spend','Flights','Hotels','Vouchers','Amazon (net)','Flipkart (net)'];
-  const catK=['base','flight','hotel','voucher','amazon','flipkart'];
-  const col3='grid-template-columns:2fr 1fr 1fr 1fr';
-  let bh=`<div class="th" style="${col3}"><span>Category</span><span class="rc">HSBC</span><span class="rc">Times Black</span><span class="rc">Axis Atlas</span></div>`;
-  catK.forEach((k,i)=>{
-    const best=Math.max(h[k],t[k],a[k]);
-    bh+=`<div class="tr" style="${col3}"><span>${catL[i]}</span><span class="rc ${h[k]===best?'bv':'dv'}">${INR(h[k])}</span><span class="rc ${t[k]===best?'bv':'dv'}">${INR(t[k])}</span><span class="rc ${a[k]===best?'bv':'dv'}">${INR(a[k])}</span></div>`;
+  const totalSpend=gen+flight+hotel+airbnb+shop+voucher+m1s+m2s;
+  const totalRew=hRew+tRew+aRew+m1.val+m2.val;
+  const mainRew=hRew+tRew+aRew;
+  const mainSpend=gen+flight+hotel+airbnb+shop+voucher;
+  const effRate=mainSpend>0?((mainRew/mainSpend)*100).toFixed(1):0;
+
+  document.getElementById('route-summary').innerHTML=`
+    <div class="rs-box"><div class="rs-sub">Total spend routed</div><div class="rs-val">${INR(totalSpend)}</div></div>
+    <div class="rs-box"><div class="rs-sub">Total reward value</div><div class="rs-val" style="color:var(--green)">${INR(totalRew)}</div></div>
+    <div class="rs-box"><div class="rs-sub">Effective reward rate</div><div class="rs-val" style="color:var(--green)">${effRate}%</div></div>`;
+
+  // Breakdown table
+  const col4='grid-template-columns:2fr 1fr 1fr 1fr';
+  let bh=`<div class="th" style="${col4}"><span>Category</span><span class="rc">Routed to</span><span class="rc">Spend</span><span class="rc">Reward</span></div>`;
+  const rows=[
+    ['General spend','Axis Atlas (4%)',gen,aRew-(airbnb*0.10)>0?gen*0.04:0],
+    ['Flights → HSBC','HSBC Premier (18%)',hFlight,hFlight*0.18],
+    ['Flights → Times Black iShop','Times Black (12%)',tFlight,tFlight*0.12],
+    ['Hotels → HSBC','HSBC Premier (36%)',hHotel,hHotel*0.36],
+    ['Hotels → Times Black iShop','Times Black (24%)',tHotel,tHotel*0.24],
+    ['Airbnb','Axis Atlas (10%)',airbnb,airbnb*0.10],
+    ['Vouchers (iShop)','Times Black (12%)',voucher,voucher*0.12],
+    ['Shopping (iShop net)','Times Black (~7.87%)',shop,shop*0.12-shop*NC],
+    ['MRCC Card 1','MRCC (MR pts)',m1s,m1.val],
+    ['MRCC Card 2','MRCC (MR pts)',m2s,m2.val],
+  ];
+  rows.forEach(r=>{
+    if(r[2]>0) bh+=`<div class="tr" style="${col4}"><span>${r[0]}</span><span class="rc" style="font-size:11px;color:var(--muted)">${r[1]}</span><span class="rc">${INR(r[2])}</span><span class="rc pos">${INR(r[3])}</span></div>`;
   });
-  bh+=`<div class="tr tot" style="${col3}"><span>Total</span><span class="rc">${INR(h.total)}</span><span class="rc">${INR(t.total)}</span><span class="rc">${INR(a.total)}</span></div>`;
-  document.getElementById('main-break').innerHTML=bh;
-
-  const col2='grid-template-columns:2fr 1fr 1fr';
-  let mb=`<div class="th" style="${col2}"><span>Component</span><span class="rc">MRCC Card 1</span><span class="rc">MRCC Card 2</span></div>`;
-  [['Base MR (1/₹50)',m1.baseMR,m2.baseMR],['Bonus: 4×₹1,500 txns',m1.b1,m2.b1],['Bonus: ₹20K+ monthly',m1.b2,m2.b2],['Total MR pts',m1.total,m2.total],[`Value @ ₹0.50/MR`,INR(m1.val),INR(m2.val)]].forEach((r,i)=>{
-    mb+=`<div class="tr${i===4?' tot':''}" style="${col2}"><span>${r[0]}</span><span class="rc">${typeof r[1]==='number'?r[1].toLocaleString('en-IN'):r[1]}</span><span class="rc">${typeof r[2]==='number'?r[2].toLocaleString('en-IN'):r[2]}</span></div>`;
-  });
-  document.getElementById('mrcc-break').innerHTML=mb;
+  bh+=`<div class="tr tot" style="${col4}"><span>Total</span><span class="rc"></span><span class="rc">${INR(totalSpend)}</span><span class="rc pos">${INR(totalRew)}</span></div>`;
+  document.getElementById('route-breakdown').innerHTML=bh;
 
   const nr=((0.12-NC)*100).toFixed(2);
-  document.getElementById('calc-note').innerHTML=`Bold values = best card per row. Times Black Amazon/Flipkart: 12% pts − ${(NC*100).toFixed(2)}% conv fee (3.5%+18%GST) = ~${nr}% net. MRCC MR valued at ₹0.50/pt (18K Gold collection — Taj Hotels). Actual range ₹0.25–₹0.50; best via Gold collection or airline transfer. IndusInd Avios: no active spend — only paying ₹5,900 annual for 5,000 renewal Avios.`;
+  document.getElementById('route-note').innerHTML=`Effective rate = main card rewards ÷ main card spend (excludes MRCC which is independent). Times Black shopping net: 12% pts − ${(NC*100).toFixed(2)}% conv fee = ~${nr}%. MRCC MR valued at ₹0.50/pt (Gold collection). Airbnb on Atlas = 5 EDGE miles × 1:2 transfer = 10 air miles/₹100.`;
 }
 
 function annualMRCC(spend){
@@ -242,34 +344,34 @@ function annualMRCC(spend){
   const total=Math.round(baseMR+b1+b2);
   const val=total*0.5;
   let fee,fn;
-  if(spend>=150000){fee=0;fn='Full waiver (≥₹1.5L spent)'}
-  else if(spend>=90000){fee=Math.round(4500*0.5*(1+GST));fn='50% waiver (₹90K–₹1.49L)'}
-  else{fee=Math.round(4500*(1+GST));fn='Full fee (₹4,500+18%GST)'}
+  if(spend>=150000){fee=0;fn='Full waiver (≥₹1.5L)'}
+  else if(spend>=90000){fee=Math.round(2250*(1+GST));fn='50% waiver — ₹2,655'}
+  else{fee=Math.round(4500*(1+GST));fn='Full fee — ₹5,310'}
   return{total,val,fee,fn};
 }
 
 function pnl(){
-  const ab=g('a-base'),af=g('a-flight'),ah=g('a-hotel'),av=g('a-voucher'),aa=g('a-amazon'),afl=g('a-flipkart');
+  const aH=g('a-hsbc'),aT=g('a-times'),aA=g('a-atlas');
+  const hfp=g('a-hsbc-fpct')/100,tfp=g('a-times-fpct')/100,atp=g('a-atlas-tpct')/100;
   const am1=g('a-m1'),am2=g('a-m2');
   const tier=document.getElementById('atlas-tier').value;
 
-  const{h,t,a}=mainRewards(ab,af,ah,av,aa,afl);
-  const totalSpend=ab+af+ah+av+aa+afl;
+  // HSBC rewards: split between flights and hotels
+  const hRew=aH*(hfp*0.18+(1-hfp)*0.36);
+  const hFee=23600,hBen=0,hNet=hRew-hFee;
 
-  // HSBC
-  const hFee=23600,hRew=h.total,hBen=0,hNet=hRew-hFee;
-
-  // Times Black
-  const tFee=23600,tRew=t.total;
-  const tBen=12000+(totalSpend>=200000?10000:0);
+  // Times Black rewards: split between flights, vouchers/shop
+  // flights@12%, rest treated as vouchers@12% (conservative — some may be shop at ~7.87%)
+  const tRew=aT*(tfp*0.12+(1-tfp)*0.12); // all iShop categories at ~12% blended
+  const tFee=23600;
+  const totalAnnualSpend=aH+aT+aA;
+  const tBen=12000+(totalAnnualSpend>=200000?10000:0);
   const tNet=tRew+tBen-tFee;
 
-  // Atlas
-  const aFee=5900,aRew=a.total;
-  const ms=tier==='gold'?5000:2500;
-  const rn=tier==='gold'?5000:0;
-  const aBen=ms+rn;
-  const aNet=aRew+aBen-aFee;
+  // Atlas rewards
+  const aRew=aA*(atp*0.10+(1-atp)*0.04);
+  const ms=tier==='gold'?5000:2500,rn=tier==='gold'?5000:0;
+  const aBen=ms+rn,aFee=5900,aNet=aRew+aBen-aFee;
 
   // MRCC
   const mr1=annualMRCC(am1),mr2=annualMRCC(am2);
@@ -277,83 +379,43 @@ function pnl(){
   // Avios
   const avFee=5900,avBen=5000,avNet=avBen-avFee;
 
-  function pCard(nm,cls,fee,rew,ben,bn,note){
+  function pCard(nm,cls,fee,rew,ben,note){
     const net=rew+ben-fee;
-    return `<div class="pc"><h3><span class="badge ${cls}">${nm}</span></h3>
+    return`<div class="pc"><h3><span class="badge ${cls}">${nm}</span></h3>
       <div class="pr"><span class="pl">Fee outflow</span><span class="neg">−${INR(fee)}</span></div>
       <div class="pr"><span class="pl">Reward inflow</span><span class="pos">+${INR(rew)}</span></div>
       <div class="pr"><span class="pl">Benefits value</span><span class="pos">+${INR(ben)}</span></div>
       ${note?`<div style="font-size:10px;color:var(--muted);padding:2px 0 4px">${note}</div>`:''}
-      <div class="pnet"><span>Net annual</span><span class="${net>=0?'pos':'neg'}">${net>=0?'+':''}${INR(net)}</span></div>
+      <div class="pnet"><span>Net annual</span><span class="${net>=0?'pos':'neg'}">${SINR(net)}</span></div>
     </div>`;
   }
 
   document.getElementById('pnl-cards').innerHTML=
-    pCard('HSBC Premier','b-h',hFee,hRew,0,'','No renewal benefit confirmed') +
-    pCard('Times Black','b-t',tFee,tRew,tBen,'',`₹12K min renewal + ${totalSpend>=200000?'₹10K Klook ✓ (≥₹2L)':'₹10K Klook NOT triggered — need ₹'+(200000-totalSpend).toLocaleString('en-IN')+' more'}`) +
-    pCard('Axis Atlas','b-a',aFee,aRew,aBen,'',`${tier==='gold'?'Gold: 5K milestone + 5K renewal miles':'Silver: 2.5K milestone only'} (1 mile=₹1)`) +
-    pCard('MRCC Card 1','b-m1',mr1.fee,mr1.val,0,'',`Fee: ${mr1.fn} | ${mr1.total.toLocaleString('en-IN')} MR pts`) +
-    pCard('MRCC Card 2','b-m2',mr2.fee,mr2.val,0,'',`Fee: ${mr2.fn} | ${mr2.total.toLocaleString('en-IN')} MR pts`) +
-    pCard('IndusInd Avios','b-av',avFee,avBen,0,'','5,000 renewal Avios @ ~₹1 = ₹5,000; no active spend');
+    pCard('HSBC Premier','b-h',hFee,hRew,0,'No renewal benefit')+
+    pCard('Times Black','b-t',tFee,tRew,tBen,`₹12K renewal + ${totalAnnualSpend>=200000?'₹10K Klook ✓':'₹10K Klook — need ₹'+(200000-totalAnnualSpend).toLocaleString('en-IN')+' more'}`)+
+    pCard('Axis Atlas','b-a',aFee,aRew,aBen,`${tier==='gold'?'Gold: 5K milestone + 5K renewal':'Silver: 2.5K milestone'}`)+
+    pCard('MRCC Card 1','b-m',mr1.fee,mr1.val,0,`${mr1.fn} | ${mr1.total.toLocaleString('en-IN')} MR pts`)+
+    pCard('MRCC Card 2','b-m',mr2.fee,mr2.val,0,`${mr2.fn} | ${mr2.total.toLocaleString('en-IN')} MR pts`)+
+    pCard('IndusInd Avios','b-av',avFee,avBen,0,'5,000 renewal Avios @ ~₹1');
 
-  const rows=[['HSBC Premier','b-h',hFee,hRew,0],['Times Black','b-t',tFee,tRew,tBen],['Axis Atlas','b-a',aFee,aRew,aBen],['MRCC Card 1','b-m1',mr1.fee,mr1.val,0],['MRCC Card 2','b-m2',mr2.fee,mr2.val,0],['IndusInd Avios','b-av',avFee,avBen,0]];
-  const tFeeAll=rows.reduce((s,r)=>s+r[2],0);
-  const tRewAll=rows.reduce((s,r)=>s+r[3]+r[4],0);
-  const tNetAll=tRewAll-tFeeAll;
+  const rows=[['HSBC Premier','b-h',hFee,hRew,0],['Times Black','b-t',tFee,tRew,tBen],['Axis Atlas','b-a',aFee,aRew,aBen],['MRCC Card 1','b-m',mr1.fee,mr1.val,0],['MRCC Card 2','b-m',mr2.fee,mr2.val,0],['IndusInd Avios','b-av',avFee,avBen,0]];
+  const tF=rows.reduce((s,r)=>s+r[2],0),tR=rows.reduce((s,r)=>s+r[3]+r[4],0),tN=tR-tF;
   const col5='grid-template-columns:2fr 1fr 1fr 1fr 1fr';
-  let sh=`<div class="th" style="${col5}"><span>Card</span><span class="rc">Fee out</span><span class="rc">Rewards in</span><span class="rc">Benefits</span><span class="rc">Net</span></div>`;
-  rows.forEach(r=>{
-    const n=r[3]+r[4]-r[2];
-    sh+=`<div class="tr" style="${col5}"><span><span class="badge ${r[1]}">${r[0]}</span></span><span class="rc neg">−${INR(r[2])}</span><span class="rc pos">+${INR(r[3])}</span><span class="rc pos">+${INR(r[4])}</span><span class="rc ${n>=0?'pos':'neg'}">${n>=0?'+':''}${INR(n)}</span></div>`;
-  });
-  sh+=`<div class="tr tot" style="${col5}"><span>TOTAL (all 6 cards)</span><span class="rc neg">−${INR(tFeeAll)}</span><span class="rc pos">+${INR(tRewAll)}</span><span class="rc"></span><span class="rc ${tNetAll>=0?'pos':'neg'}">${tNetAll>=0?'+':''}${INR(tNetAll)}</span></div>`;
+  let sh=`<div class="th" style="${col5}"><span>Card</span><span class="rc">Fee out</span><span class="rc">Rewards</span><span class="rc">Benefits</span><span class="rc">Net</span></div>`;
+  rows.forEach(r=>{const n=r[3]+r[4]-r[2];sh+=`<div class="tr" style="${col5}"><span><span class="badge ${r[1]}">${r[0]}</span></span><span class="rc neg">−${INR(r[2])}</span><span class="rc pos">+${INR(r[3])}</span><span class="rc pos">+${INR(r[4])}</span><span class="rc ${n>=0?'pos':'neg'}">${SINR(n)}</span></div>`;});
+  sh+=`<div class="tr tot" style="${col5}"><span>TOTAL</span><span class="rc neg">−${INR(tF)}</span><span class="rc pos">+${INR(tR)}</span><span class="rc"></span><span class="rc ${tN>=0?'pos':'neg'}">${SINR(tN)}</span></div>`;
   document.getElementById('pnl-sum').innerHTML=sh;
-  document.getElementById('pnl-note').innerHTML=`Total annual fee outflow: <b>${INR(tFeeAll)}</b>. Total reward+benefit inflow: <b>${INR(tRewAll)}</b>. Net P&amp;L: <b class="${tNetAll>=0?'pos':'neg'}">${tNetAll>=0?'+':''}${INR(tNetAll)}</b>. MR pts at ₹0.50/pt. Avios at ₹1/pt conservative. Times Black ₹10K Klook at ₹2L combined annual spend. Atlas EDGE miles at 1:1 (₹1/mile). HSBC fee waived if Premier banking maintained (₹40L TRB).`;
-}
-
-function renderOpt(){
-  const nr=((0.12-NC)*100).toFixed(1);
-  document.getElementById('opt-cat').innerHTML=`
-    <div class="oc"><h4>Category winners</h4>
-      ${[['Base spend','Axis Atlas','4%'],['Flights','HSBC Premier','18%'],['Hotels','HSBC Premier','36%'],['Vouchers (iShop)','Times Black','12%'],['Amazon (iShop)','Times Black',nr+'% net'],['Flipkart (iShop)','Times Black',nr+'% net']].map(r=>`<div class="or"><span>${r[0]}</span><span><b>${r[1]}</b> <span class="pos">${r[2]}</span></span></div>`).join('')}
-    </div>
-    <div class="oc"><h4>Gaps vs. next-best</h4>
-      ${[['Hotel: HSBC vs Times Black','+12% advantage'],['Hotel: HSBC vs Atlas','+26% advantage'],['Flight: HSBC vs Times Black','+6% advantage'],['Voucher: Times Black vs Atlas','+8% advantage'],['Base: Atlas vs HSBC','+1% advantage'],['MRCC: bonus MR vs base only','Up to +2,000 MR/month/card']].map(r=>`<div class="or"><span>${r[0]}</span><span class="pos">${r[1]}</span></div>`).join('')}
-    </div>`;
-
-  document.getElementById('opt-boost').innerHTML=`
-    <div class="th" style="grid-template-columns:3fr 1fr 1fr 1fr"><span>Action</span><span class="rc">Annual gain</span><span class="rc">Effort</span><span class="rc">Priority</span></div>
-    ${[
-      ['Route all hotel spend to HSBC (not Atlas/Times Black)','+26% per ₹100 vs Atlas','Zero','★★★'],
-      ['Route all flights to HSBC (not Atlas)','18% vs 10% = +8%','Zero','★★★'],
-      ['Times Black: ensure ₹2L total annual spend','₹10,000 Klook voucher','Low','★★★'],
-      ['Atlas: push to Gold tier (₹7.5L annual spend)','10,000 bonus miles = ₹10,000','Medium','★★★'],
-      ['MRCC ×2: keep ≥₹1.5L/year each → free fee','Save ₹5,310/card × 2','Low','★★★'],
-      ['MRCC ×2: hit 4×₹1,500 txns/month each','1,000 bonus MR × 12 × 2 = 24,000 MR','Low','★★★'],
-      ['MRCC ×2: hit ₹20K+/month each','1,000 bonus MR × 12 × 2 = 24,000 MR','Medium','★★'],
-      ['Atlas: book flights/hotels DIRECT (not OTA)','10 miles vs 4 miles/₹100','Low','★★'],
-      ['Avios: just pay annual fee, collect renewal Avios','5,000 Avios ≈ ₹5,000, cost ₹5,900','Minimal','★'],
-    ].map(r=>`<div class="tr" style="grid-template-columns:3fr 1fr 1fr 1fr"><span>${r[0]}</span><span class="rc pos">${r[1]}</span><span class="rc">${r[2]}</span><span class="rc">${r[3]}</span></div>`).join('')}`;
-
-  document.getElementById('opt-strat').innerHTML=`
-    <h3>Optimal routing — how to use each card</h3>
-    <div class="si"><span class="dot" style="background:#ddd8f8;color:#3a3080">H</span><span><b>HSBC Premier</b> — ALL flights (18%) and hotels (36%). Never use another card for these categories. 0.99% forex markup = also best for international spends.</span></div>
-    <div class="si"><span class="dot" style="background:#fad8c8;color:#7a3018">T</span><span><b>Times Black</b> — Vouchers (12%), Amazon (~${nr}% net), Flipkart (~${nr}% net) via iShop only. Watch ₹2L annual spend to unlock ₹10K Klook. Keep base spend away from this card (only 2%).</span></div>
-    <div class="si"><span class="dot" style="background:#b8ecd8;color:#0a5038">A</span><span><b>Axis Atlas</b> — Default for ALL base/general spend (4%). Push to ₹7.5L annual for Gold tier (5K milestone + 5K renewal = ₹10,000 extra). Book flights/hotels DIRECT on airline/hotel sites for 10x.</span></div>
-    <div class="si"><span class="dot" style="background:#fff0b8;color:#7a5800">M</span><span><b>MRCC ×2</b> — ₹9K voucher/card/month for 4-txn milestone (1,000 MR). Keep each at ₹1.5L+/year for free renewal. Accumulate MR toward 18K Gold collection (₹9,000 Taj voucher). MR never expires.</span></div>
-    <div class="si"><span class="dot" style="background:#e0ecff;color:#0a2870">I</span><span><b>IndusInd Avios</b> — Dormant. Pay ₹5,900 fee → collect 5,000 renewal Avios. Net cost ~₹900/year. Use Avios for Qatar/BA redemptions. No active card spend needed.</span></div>`;
-
-  document.getElementById('opt-note').innerHTML=`Atlas: travel earn capped at ₹2L/month at 10x. Beyond ₹2L/month travel = drops to 4x (base). MRCC: Amex not issuing new cards (Apr 2025) — your 2 cards are grandfathered. MR points never expire as long as card is active. Times Black iShop convenience fee updated to 3.5% post Jan 2026.`;
+  document.getElementById('pnl-note').innerHTML=`Each card shows only the spend actually routed to it. HSBC blends flights (18%) and hotels (36%) based on your % split. Times Black blends iShop categories ~12% average. Atlas blends Airbnb (10%) and general (4%). MRCC at ₹0.50/MR. Avios at ₹1/Avios.`;
 }
 
 function renderRef(){
   const nr=((0.12-NC)*100).toFixed(2);
   document.getElementById('ref-content').innerHTML=[
-    {cls:'b-h',nm:'HSBC Premier India',fee:'₹23,600/year (₹20,000 + 18% GST)',ren:'No renewal benefit',rows:[['Base (all categories)','3 miles / ₹100 → 3%'],['Flights (accelerated)','18 miles / ₹100 → 18%'],['Hotels (accelerated)','36 miles / ₹100 → 36%'],['Vouchers / Amazon / Flipkart','3 miles / ₹100 (base rate — no acceleration)'],['Mile value','1 mile = ₹1 (1:1 to 20+ airline/hotel partners)'],['Forex markup','0.99% — lowest in class'],['Fee waiver','If Premier banking maintained (₹40L TRB / ₹3L salary)']]},
-    {cls:'b-t',nm:'Times Black ICICI',fee:'₹23,600/year (₹20,000 + 18% GST)',ren:'Min ₹12,000 renewal benefit + ₹10,000 Klook at ₹2L annual spend',rows:[['Base (domestic)','2 pts / ₹100 → 2%'],['Flights via iShop (6×)','12 pts / ₹100 → 12%'],['Hotels via iShop (12×)','24 pts / ₹100 → 24%'],['Vouchers via iShop (6×)','12 pts / ₹100 → 12%'],['Amazon via iShop','12% pts − 4.13% fee = ~'+nr+'% net'],['Flipkart via iShop','12% pts − 4.13% fee = ~'+nr+'% net (updated Jan 2026)'],['iShop convenience fee','3.5% + 18% GST = 4.13% effective cost (post-Jan 2026)'],['Point value','1 pt = ₹1 (iShop redemption)'],['Forex markup','1.49%']]},
-    {cls:'b-a',nm:'Axis Atlas',fee:'₹5,900/year (₹5,000 + 18% GST) — no waiver option',ren:'Silver: 0 renewal | Gold (₹7.5L spend): 5,000 renewal EDGE miles',rows:[['Base (all)','4 miles / ₹100 → 4%'],['Flights/Hotels DIRECT (accelerated)','10 miles / ₹100 → 10%'],['OTA bookings (flights/hotels)','Base 4 miles / ₹100 only (no acceleration)'],['Travel cap','Max ₹2L/month at 10x; beyond = 4x base'],['Silver milestone (₹3L spend)','2,500 EDGE miles'],['Gold milestone (₹7.5L spend)','2,500 + 2,500 = 5,000 total milestone miles'],['Gold renewal benefit','5,000 EDGE miles on fee payment'],['Mile value','1 mile = ₹1 (Travel EDGE) or 1:2 partner transfers'],['Exclusions (tier + earn)','Rent, gold/jewellery, wallet, govt, insurance, fuel, utilities']]},
-    {cls:'b-m1',nm:'MRCC (Both Cards — same structure)',fee:'Y1: ₹1,000 | Y2+: ₹4,500 + 18% GST = ₹5,310',ren:'Full waiver ≥₹1.5L/year | 50% waiver ₹90K–₹1.49L | Full fee if <₹90K',rows:[['Base earn','1 MR / ₹50 spent → ~2%'],['Monthly bonus 1','1,000 MR on 4× txns ≥ ₹1,500 in a calendar month'],['Monthly bonus 2','1,000 MR on ≥ ₹20,000 spend in a calendar month'],['Max monthly MR (₹20K spend)','~2,400 MR (base + both bonuses)'],['MR value — statement credit','₹0.25/MR'],['MR value — 18K Gold collection','₹0.33–₹0.50/MR (Taj Hotels = best at ₹0.50)'],['MRCC strategy','₹9K voucher/month → triggers 4-txn milestone automatically'],['MR expiry','Never (as long as card is active)'],['Note','Amex not issuing new cards as of Apr 2025 — cards grandfathered']]},
-    {cls:'b-av',nm:'IndusInd Avios Visa Infinite',fee:'₹5,900 annual (₹5,000 + 18% GST) | ₹11,800 joining (₹10,000 + GST)',ren:'5,000 bonus Avios on annual fee payment',rows:[['Base earn','3 Avios / ₹200 → 1.5%'],['Preferred destination (POS swipe)','6 Avios / ₹200 → 3%'],['BA/Qatar direct flights','5 Avios / ₹200'],['Utilities/govt/insurance','1 Avios / ₹200'],['Renewal Avios','5,000 Avios on fee payment ≈ ₹5,000'],['Annual milestone','18,000 Avios at ₹8L; another 18,000 at ₹16L'],['Avios value','~₹1 economy | ₹3–₹5+ for Business class redemptions'],['Your plan','Pay ₹5,900 fee → collect 5,000 renewal Avios. No active spend.'],['Net cost of card','₹900/year for card + lounge access']]},
+    {cls:'b-h',nm:'HSBC Premier India',fee:'₹23,600/yr (waived with Premier banking)',ren:'No renewal benefit',rows:[['Base','3 miles/₹100 → 3%'],['Flights (accelerated)','18 miles/₹100 → 18%'],['Hotels (accelerated)','36 miles/₹100 → 36%'],['Airbnb','3 miles/₹100 (base — no acceleration)'],['Mile value','1 mile = ₹1 (1:1 to 20+ partners)'],['Forex markup','0.99%']]},
+    {cls:'b-t',nm:'Times Black ICICI',fee:'₹23,600/yr',ren:'₹12,000 min + ₹10,000 Klook at ₹2L annual spend',rows:[['Base (domestic)','2 pts/₹100 → 2%'],['Flights via iShop (6×)','12 pts/₹100 → 12%'],['Hotels via iShop (12×)','24 pts/₹100 → 24%'],['Vouchers via iShop (6×)','12 pts/₹100 → 12%'],['Amazon/Flipkart via iShop','12% pts − 4.13% fee = ~'+nr+'% net'],['iShop conv fee (Jan 2026)','3.5% + 18% GST = 4.13%'],['Point value','1 pt = ₹1 (iShop redemption)']]},
+    {cls:'b-a',nm:'Axis Atlas',fee:'₹5,900/yr — no waiver',ren:'Gold tier (₹7.5L): 5,000 milestone + 5,000 renewal EDGE miles',rows:[['Base','4 miles/₹100 → 4% (2% base × 1:2 transfer)'],['Flights/Hotels DIRECT','10 miles/₹100 → 10% (5 EDGE × 1:2)'],['Airbnb','10 miles/₹100 → 10% (travel MCC)'],['OTA bookings','4 miles/₹100 only (base rate)'],['Silver milestone (₹3L)','2,500 EDGE miles = 5,000 air miles'],['Gold milestone (₹7.5L)','5,000 EDGE miles + 5,000 renewal'],['Travel earn cap','₹2L/month at accelerated rate']]},
+    {cls:'b-m',nm:'MRCC (Both Cards)',fee:'₹5,310/yr full | ₹2,655 at 50% waiver | Free at ₹1.5L',ren:'Full waiver ≥₹1.5L | 50% waiver ₹90K–₹1.49L',rows:[['Base','1 MR/₹50 → ~2%'],['Monthly bonus 1','1,000 MR on 4× txns ≥₹1,500'],['Monthly bonus 2','1,000 MR on ≥₹20,000 monthly spend'],['MR value (Gold collection)','₹0.50/MR (Taj) | ₹0.33/MR (Amazon/Flipkart)'],['MR never expires','As long as card is active'],['Strategy','₹9K voucher/month = 6× ₹1,500 → triggers bonus 1']]},
+    {cls:'b-av',nm:'IndusInd Avios',fee:'₹5,900/yr | ₹11,800 joining',ren:'5,000 Avios on annual fee payment ≈ ₹5,000',rows:[['Base','3 Avios/₹200 → 1.5%'],['Preferred destination (POS)','6 Avios/₹200 → 3%'],['BA/Qatar direct','5 Avios/₹200'],['Renewal','5,000 Avios on fee payment'],['Your plan','Pay fee → collect 5,000 Avios. Net cost ~₹900/yr'],['Avios value','~₹1 economy | ₹3–5+ Business class']]},
   ].map(c=>`
     <div style="margin-bottom:16px">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px">
@@ -362,17 +424,15 @@ function renderRef(){
       </div>
       <div style="font-size:11px;color:var(--green);margin-bottom:7px">Renewal: ${c.ren}</div>
       <div class="tbox">
-        ${c.rows.map((r,i)=>`<div class="pr" style="padding:7px 13px;${i===0?'border-top:none':''}"><span class="pl">${r[0]}</span><span style="font-weight:500;text-align:right;max-width:55%">${r[1]}</span></div>`).join('')}
+        ${c.rows.map((r,i)=>`<div class="pr" style="padding:7px 13px;${i===0?'border-top:none':''}"><span class="pl">${r[0]}</span><span style="font-weight:500">${r[1]}</span></div>`).join('')}
       </div>
     </div>`).join('')+
-  `<div class="notebox">All GST at 18%. Axis Atlas discontinued for new applicants (Apr 2024) — existing cardholders retain all benefits. Times Black iShop fee updated Jan 2026 (3.5% for Amazon, Flipkart, Swiggy). HSBC fee waived with Premier banking. MRCC renewal fee at ₹4,500 (full) / ₹2,250+GST (50% waiver) based on annual spend bracket. IndusInd Avios joining fee revised down from ₹40,000 to ₹10,000 in Apr 2025.</div>`;
+  `<div class="notebox">Times Black iShop fee updated Jan 2026 (3.5% Amazon/Flipkart/Swiggy). Atlas discontinued for new applicants — existing cardholders retain benefits. Axis Atlas travel rate (10 miles/₹100) applies to direct airline, direct hotel, and Airbnb. OTA bookings (MakeMyTrip etc.) earn base 4 miles only. MRCC: Amex not issuing new cards Apr 2025 — your 2 cards grandfathered.</div>`;
 }
 
-// Init
-calc();
-renderOpt();
-renderRef();
+route();
 pnl();
+renderRef();
 </script>
 </body>
 </html>
